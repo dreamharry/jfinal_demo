@@ -1,0 +1,31 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+    <head>
+        <title>edit.html</title>
+
+        <meta http-equiv="keywords" content="keyword1,keyword2,keyword3">
+        <meta http-equiv="description" content="this is my page">
+        <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+
+        <!--<link rel="stylesheet" type="text/css" href="./styles.css">-->
+
+    </head>
+
+    <body>
+        <form class="pageForm" action="${base}/student/update" method="post" onsubmit="return validateCallback(this, dialogAjaxDone)">
+        <input type="hidden" name="student.id" value = "${student.id}">
+            姓名：
+            <input type="text" class="required" name="student.s_name" value="${student.s_name}" />${studentnameMsg!}${studentnameLMsg!}
+            <br />
+            年龄：
+            <input type="text" name="student.s_age" value="${student.s_age}" />
+            <br />
+            性别：
+            <input type="text" name="student.s_sex" value="${student.s_sex}" />
+            <br />
+
+            <br />
+            <input type="submit" value="保存" />
+        </form>
+    </body>
+</html>
